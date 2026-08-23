@@ -195,6 +195,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
+  const isPrestigious = project.title === 'My Crunchy Project' || project.title === 'MyVoice';
+
   return (
     <motion.div
       ref={ref}
@@ -218,24 +220,53 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         }}
         className="group relative h-full rounded-3xl overflow-hidden hover:-translate-y-1 transition-transform"
       >
-        <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-slate-100 via-slate-50 to-transparent opacity-100 group-hover:from-emerald-600/30 group-hover:via-amber-400/20 group-hover:to-transparent transition-all duration-500" />
+        {isPrestigious ? (
+          <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-amber-100 via-amber-50 to-transparent opacity-100 group-hover:from-amber-500/30 group-hover:via-amber-400/20 group-hover:to-transparent transition-all duration-500" />
+        ) : (
+          <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-slate-100 via-slate-50 to-transparent opacity-100 group-hover:from-emerald-600/30 group-hover:via-amber-400/20 group-hover:to-transparent transition-all duration-500" />
+        )}
 
-        <div className="relative h-full rounded-3xl bg-white border border-slate-100 group-hover:border-emerald-200 p-6 flex flex-col transition-all duration-300 group-hover:shadow-[0_12px_30px_rgba(124,58,237,0.06)]">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-600/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className={`relative h-full rounded-3xl border p-6 flex flex-col transition-all duration-300 ${
+          isPrestigious 
+            ? 'bg-amber-50/15 border-amber-200/50 group-hover:border-amber-300 group-hover:shadow-[0_12px_30px_rgba(245,158,11,0.06)]' 
+            : 'bg-white border-slate-100 group-hover:border-emerald-200 group-hover:shadow-[0_12px_30px_rgba(16,185,129,0.06)]'
+        }`}>
+          {isPrestigious ? (
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          ) : (
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-600/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          )}
 
           <div className="flex items-start justify-between mb-5">
-            <div className={`p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-100/50 text-emerald-600`}>
+            <div className={`p-2.5 rounded-xl border ${
+              isPrestigious 
+                ? 'bg-amber-50 text-amber-500 border-amber-100 shadow-sm' 
+                : 'bg-emerald-50/70 border-emerald-100/50 text-emerald-600'
+            }`}>
               <ProjectIcon iconName={project.iconName} />
             </div>
-            <span className="text-xs font-mono tracking-wider text-slate-500 bg-slate-50 border border-slate-100 px-3 py-1 rounded-full">
-              {project.year}
-            </span>
+            <div className="flex items-center gap-1.5">
+              {isPrestigious && (
+                <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded-md">
+                  ✨ Prestigious
+                </span>
+              )}
+              <span className="text-xs font-mono tracking-wider text-slate-500 bg-slate-50 border border-slate-100 px-3 py-1 rounded-full">
+                {project.year}
+              </span>
+            </div>
           </div>
 
-          <h3 className="text-xl font-display font-extrabold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors duration-300">
+          <h3 className={`text-xl font-display font-extrabold mb-1 transition-colors duration-300 ${
+            isPrestigious 
+              ? 'text-slate-900 group-hover:text-amber-600' 
+              : 'text-slate-900 group-hover:text-emerald-600'
+          }`}>
             {project.title}
           </h3>
-          <p className="text-xs text-emerald-600 font-semibold mb-3">{project.subtitle}</p>
+          <p className={`text-xs font-semibold mb-3 ${
+            isPrestigious ? 'text-amber-600' : 'text-emerald-600'
+          }`}>{project.subtitle}</p>
 
           <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>
 
@@ -243,7 +274,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2.5 py-0.5 text-[10px] font-semibold rounded-full bg-slate-50 text-slate-500 border border-slate-100 hover:border-emerald-200 hover:text-emerald-600 transition-all duration-300"
+                className={`px-2.5 py-0.5 text-[10px] font-semibold rounded-full border transition-all duration-300 ${
+                  isPrestigious 
+                    ? 'bg-amber-50/50 text-amber-700 border-amber-100 hover:border-amber-300' 
+                    : 'bg-slate-50 text-slate-500 border-slate-100 hover:border-emerald-200 hover:text-emerald-600'
+                }`}
               >
                 {tag}
               </span>
@@ -254,7 +289,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-600 font-bold group/link transition-colors duration-300 mt-auto"
+            className={`inline-flex items-center gap-1.5 text-xs font-bold group/link transition-colors duration-300 mt-auto ${
+              isPrestigious 
+                ? 'text-slate-500 hover:text-amber-600' 
+                : 'text-slate-500 hover:text-emerald-600'
+            }`}
           >
             {project.external ? (
               <ExternalLink className="w-3.5 h-3.5" />
