@@ -195,7 +195,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
-  const isPrestigious = project.title === 'My Crunchy Project' || project.title === 'MyVoice';
+  const isPrestigious = project.title === 'GMS Crunch Experience' || project.title === 'MyVoice.ai';
 
   return (
     <motion.div
