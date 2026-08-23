@@ -194,11 +194,11 @@ export default function Sidebar({ activeSection }: SidebarProps) {
 
         {/* Social Links */}
         <div className="flex justify-center gap-3 mb-6 shrink-0">
-          <a href="https://github.com/rithesh2130-beep" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/rithesh2130-raja" target="_blank" rel="noopener noreferrer"
             className="p-2.5 rounded-xl border border-slate-100 text-slate-400 hover:text-emerald-600 hover:border-emerald-100 hover:bg-emerald-50/30 transition-all shadow-sm" aria-label="GitHub">
             <Github className="w-4 h-4" />
           </a>
-          <a href="https://www.linkedin.com/in/rithesh2130" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/p-rithesh-raja-3672502a6" target="_blank" rel="noopener noreferrer"
             className="p-2.5 rounded-xl border border-slate-100 text-slate-400 hover:text-emerald-600 hover:border-emerald-100 hover:bg-emerald-50/30 transition-all shadow-sm" aria-label="LinkedIn">
             <Linkedin className="w-4 h-4" />
           </a>

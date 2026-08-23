@@ -50,24 +50,6 @@ const statCardVariants: Variants = {
   }),
 };
 
-const stats = [
-  {
-    value: "3+",
-    label: "MERN Apps Built",
-    icon: Code2,
-  },
-  {
-    value: "1st",
-    label: "Hackathon Win",
-    icon: Trophy,
-  },
-  {
-    value: "AI",
-    label: "ML Models Shipped",
-    icon: Award,
-  },
-];
-
 const terminalBody = [
   { indent: 2, key: "name", value: '"Pandi Rithesh Raja"' },
   { indent: 2, key: "status", value: '"🟢 Coding & Shipping"' },
@@ -241,38 +223,6 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        {/* Stat Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mt-16">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              custom={i}
-              variants={statCardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              whileHover={{
-                y: -4,
-                boxShadow: "0 10px 25px rgba(124,58,237,0.06)",
-                borderColor: "rgba(124,58,237,0.25)"
-              }}
-              className="glass-card group relative rounded-3xl p-6 text-center bg-white border border-slate-100 shadow-sm cursor-default transition-all duration-300"
-            >
-              {/* Glow accent */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-600/5 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-              <div className="relative z-10">
-                <stat.icon className="w-6 h-6 text-emerald-600 mx-auto mb-3 opacity-60 group-hover:opacity-100 transition-opacity" />
-                <div className="text-3xl font-display font-black text-slate-900 mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wide">
-                  {stat.label}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

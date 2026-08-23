@@ -8,7 +8,7 @@ const educationData = [
     degree: 'B.Tech AI & Data Science',
     institution: 'College of Engineering & Technology (3rd Year)',
     period: '2023 - 2027',
-    details: ['Focusing on Machine Learning, ETL pipelines, and Cloud Analytics', 'Current CGPA: 7.5'],
+    details: ['Focusing on Machine Learning, ETL pipelines, and Cloud Analytics', 'Current CGPA: 8.0'],
     active: true,
   },
   {
