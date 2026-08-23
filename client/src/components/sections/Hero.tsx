@@ -259,32 +259,6 @@ export default function Hero() {
           Hey! I'm a student engineer based in India. I love designing intelligent data pipelines, training ML classifiers, and building beautiful, responsive user interfaces.
         </motion.p>
 
-        {/* ---- Metric Counters ---- */}
-        <motion.div
-          custom={0.7}
-          variants={fadeUp}
-          className="flex flex-wrap justify-center gap-6 mb-10"
-        >
-          {metrics.map((m, i) => {
-            const { count } = counters[i];
-            return (
-              <div
-                key={m.label}
-                className="flex flex-col items-center min-w-[130px] rounded-3xl bg-white border border-slate-100 px-6 py-4.5
-                           shadow-sm hover:border-emerald-200 hover:shadow-md transition-all duration-300"
-              >
-                <span className="text-3xl sm:text-4xl font-display font-black text-slate-900">
-                  {count}
-                  {m.suffix}
-                </span>
-                <span className="text-[10px] font-bold text-slate-400 mt-1.5 uppercase tracking-wider">
-                  {m.label}
-                </span>
-              </div>
-            );
-          })}
-        </motion.div>
-
         {/* ---- CTA Buttons ---- */}
         <motion.div
           custom={0.9}
@@ -304,7 +278,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://github.com/rithesh2130-beep"
+            href="https://github.com/rithesh2130-raja"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white

@@ -2,17 +2,41 @@
   {
     "id": "featured-1",
     "title": "Drishta-AI",
-    "subtitle": "AI-powered digital safety platform",
-    "description": "AI-powered safety monitoring platform with threat detection classifiers, robust backend, and React dashboard interface.",
+    "subtitle": "AI-powered digital safety platform (Hackathon Winner)",
+    "description": "Award-winning safety monitoring platform with threat detection classifiers, robust backend, and React dashboard interface. Winner of the hackathon championship.",
     "tags": ["Python", "Machine Learning", "React", "Node.js", "Express"],
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/drishta-ai",
-    "iconName": "Shield",
+    "iconName": "Trophy",
     "iconBg": "bg-emerald-500/10 text-emerald-600",
     "isFeatured": true
   },
   {
     "id": "project-1",
+    "title": "My Crunchy Project",
+    "subtitle": "MERN Stack Interactive Web App",
+    "description": "A modern TypeScript/MERN web application building interactive components, dynamic state controllers, and structured visual data sheets.",
+    "tags": ["MERN Stack", "TypeScript", "React", "Node.js", "Express"],
+    "year": "2026",
+    "link": "https://github.com/rithesh2130-raja/My_Cruncy_project",
+    "iconName": "Briefcase",
+    "iconBg": "bg-emerald-500/10 text-emerald-600",
+    "isFeatured": false
+  },
+  {
+    "id": "project-2",
+    "title": "MyVoice",
+    "subtitle": "MERN AI Voice & Speech Recognition",
+    "description": "Speech synthesis and voice command processor capturing user audio transcripts in real time, executing local browser UI triggers.",
+    "tags": ["MERN Stack", "React", "Web Audio API", "AI Speech Recognition"],
+    "year": "2026",
+    "link": "https://github.com/rithesh2130-raja/MyVoice",
+    "iconName": "Mic",
+    "iconBg": "bg-amber-500/10 text-amber-600",
+    "isFeatured": false
+  },
+  {
+    "id": "project-3",
     "title": "AI Reflex Arena",
     "subtitle": "Human Reflex Analysis Platform",
     "description": "Web app designed to gather human reflex statistics, analyze response times, and represent metrics and data distributions beautifully.",
@@ -20,11 +44,11 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/AI_Reflex_Arena",
     "iconName": "Activity",
-    "iconBg": "bg-amber-500/10 text-amber-600",
+    "iconBg": "bg-emerald-500/10 text-emerald-600",
     "isFeatured": false
   },
   {
-    "id": "project-2",
+    "id": "project-4",
     "title": "My Portfolio",
     "subtitle": "Technical Showcase & CMS",
     "description": "Custom developer portfolio with dynamic dashboard console, local JSON database file storage, and glassmorphic skeuomorphic ID card tilt physics.",
@@ -32,23 +56,11 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/my-portfolio",
     "iconName": "Layout",
-    "iconBg": "bg-emerald-500/10 text-emerald-600",
-    "isFeatured": false
-  },
-  {
-    "id": "project-3",
-    "title": "My Crunchy Project",
-    "subtitle": "Interactive Web App",
-    "description": "A modern TypeScript web application building interactive components and data bindings with clean separation of concerns.",
-    "tags": ["TypeScript", "HTML5", "CSS3", "Vite", "Modern Web"],
-    "year": "2026",
-    "link": "https://github.com/rithesh2130-raja/My_Cruncy_project",
-    "iconName": "Briefcase",
     "iconBg": "bg-amber-500/10 text-amber-600",
     "isFeatured": false
   },
   {
-    "id": "project-4",
+    "id": "project-5",
     "title": "Palamner Palace",
     "subtitle": "Heritage & Resort Showcase",
     "description": "Interactive web platform to display heritage structures, map out resort designs, and present palace layouts dynamically.",
@@ -60,7 +72,7 @@
     "isFeatured": false
   },
   {
-    "id": "project-5",
+    "id": "project-6",
     "title": "Play Store Analytics",
     "subtitle": "Python Data Analysis Pipeline",
     "description": "Data analysis project evaluating Google Play Store app records, reviews, installation stats, and customer sentiment classification.",
@@ -72,18 +84,6 @@
     "isFeatured": false
   },
   {
-    "id": "project-6",
-    "title": "MyVoice",
-    "subtitle": "Voice & Speech Recognition",
-    "description": "Web client recording sound input and converting voice to commands or transcripts dynamically in the browser.",
-    "tags": ["JavaScript", "Web Audio API", "Speech Recognition", "Frontend"],
-    "year": "2026",
-    "link": "https://github.com/rithesh2130-raja/MyVoice",
-    "iconName": "Mic",
-    "iconBg": "bg-emerald-500/10 text-emerald-600",
-    "isFeatured": false
-  },
-  {
     "id": "project-7",
     "title": "MERN Mastery",
     "subtitle": "Full Stack Mastery templates",
@@ -92,7 +92,7 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/mernmastery",
     "iconName": "Flame",
-    "iconBg": "bg-amber-500/10 text-amber-600",
+    "iconBg": "bg-emerald-500/10 text-emerald-600",
     "isFeatured": false
   },
   {
@@ -104,7 +104,7 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/mernstack",
     "iconName": "Globe",
-    "iconBg": "bg-emerald-500/10 text-emerald-600",
+    "iconBg": "bg-amber-500/10 text-amber-600",
     "isFeatured": false
   },
   {
@@ -116,7 +116,7 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/Student_Result_Prediction",
     "iconName": "TrendingUp",
-    "iconBg": "bg-amber-500/10 text-amber-600",
+    "iconBg": "bg-emerald-500/10 text-emerald-600",
     "isFeatured": false
   },
   {
@@ -128,7 +128,7 @@
     "year": "2026",
     "link": "https://github.com/rithesh2130-raja/battleship",
     "iconName": "Anchor",
-    "iconBg": "bg-emerald-500/10 text-emerald-600",
+    "iconBg": "bg-amber-500/10 text-amber-600",
     "isFeatured": false
   }
 ]
